@@ -23,7 +23,7 @@ public class Ejemplo1TiposDeVariables {
 		
 		char soltero = 's';
 		
-		String frase =nombre + edad + " anios de edad.";
+		String frase =nombre + edad + " años de edad.";
 		
 		
 		
