@@ -16,8 +16,12 @@ public class Ejemplo2ConversionDatos
 		//la función valueof() del objeto numerico
 		edadNum = Integer.valueOf(edad);
 		
-		System.out.println(pequeno);
+		String sNota = "7.34";
+		double nota = Double.valueOf(sNota);
 		
+		
+		System.out.println(pequeno);
+		System.out.println(nota);
 		System.out.println(edadNum);
 		
 	}

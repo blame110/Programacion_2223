@@ -11,7 +11,7 @@ public class EjemploEntradaDatos {
 		int edad=22;
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.print("Introduce tu nombre: ");
+		System.out.print("Introduce tu nombre, por favor: ");
 		//leemos cadenas de texto con next o nextline
 		nombre = teclado.next();
 		
