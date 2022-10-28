@@ -1,4 +1,4 @@
-package unidad2;
+package unidad21;
 
 import java.util.Scanner;
 
