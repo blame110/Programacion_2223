@@ -25,20 +25,19 @@ public class EjemploTablaMultiplicar {
 		// Mostrar por pantalla todas las tablas de multiplicar
 
 		int j = 1;
-		//El bucle exterior es el que va mostrando todas las tablas,
-		//cada vez que la j se incrementa, se mostrará completa una tabla de
-		//multiplicar, la correspondiente a la j en esa repeticion
+
+		// El bucle exterior es el que va mostrando todas las tablas,
+		// cada vez que la j se incrementa, se mostrará completa una tabla de
+		// multiplicar, la correspondiente a la j en esa repeticion
 		while (j <= 10) {
 
 			System.out.println("\n\n***************************************");
-			System.out.println("**    Tabla de Multiplicar del " +j + "    **");
+			System.out.println("**    Tabla de Multiplicar del " + j + "    **");
 			System.out.println("***************************************\n\n");
-			
 
-			
 			i = 1;
-			//El bucle interior mostrará la tabla de multiplicar completa 
-			//del número j
+			// El bucle interior mostrará la tabla de multiplicar completa
+			// del número j
 			while (i <= 10) {
 				System.out.println(j + " x " + i + " = " + j * i);
 				i++;
@@ -46,6 +45,27 @@ public class EjemploTablaMultiplicar {
 
 			// Pasamos a la siguiente tabla de multiplicar
 			j++;
+		}
+
+		System.out.println("\n\nCon el bucle for:\n\n");
+
+		System.out.println("\n\n***************************************");
+		System.out.println("**    Tabla de Multiplicar del 1     **");
+		System.out.println("***************************************\n\n");
+
+		for (j = 1; j <= 10; j++) {
+
+			// Mostramos la tabla de multiplicar de j
+			for (i = 1; i <= 10; i++) {
+				System.out.println(j + " x " + i + " = " + j * i);
+			}
+
+			if (j < 10) {
+				System.out.println("\n\n***************************************");
+				System.out.println("**    Tabla de Multiplicar del " + (j + 1) + "    **");
+				System.out.println("***************************************\n\n");
+			}
+
 		}
 
 		teclado.close();
