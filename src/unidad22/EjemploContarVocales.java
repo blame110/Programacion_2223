@@ -46,7 +46,7 @@ public class EjemploContarVocales {
 		
 		//Mostramos los resultados
 		System.out.println("Se han econtrado " + numVocales + " vocales");
-		System.out.println("Se ha encontrado  " +  numRepet + " veces la letra " + letra);
+		System.out.println("Se ha encontrado " +  numRepet + " veces la letra " + letra);
 		
 	}
 
