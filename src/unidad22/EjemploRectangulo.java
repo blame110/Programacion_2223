@@ -39,13 +39,6 @@ public class EjemploRectangulo {
 			System.out.println();
 		}
 		
-		/*
-		******
-		*    *
-		
-		
-		******************************
-		**/
 
 		System.out.println("\n*************************************");
 		System.out.println("**********RECTANGULO HUECO*************");
