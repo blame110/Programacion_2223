@@ -28,44 +28,41 @@ public class EjemploRectangulo {
 		System.out.println("\n*************************************");
 		System.out.println("**********RECTANGULO*****************");
 		System.out.println("*************************************\n\n");
-		
-		//repetimos cada linea altura veces
+
+		// repetimos cada linea altura veces
 		for (int j = 0; j < altura; j++) {
-			//Dibujamos una linea de ancho base
+			// Dibujamos una linea de ancho base
 			for (int i = 0; i < base; i++) {
 				System.out.print("*");
 			}
-			//Despues de cada linea hacemos un enter
+			// Despues de cada linea hacemos un enter
 			System.out.println();
 		}
-		
 
 		System.out.println("\n*************************************");
 		System.out.println("**********RECTANGULO HUECO*************");
 		System.out.println("*************************************\n\n");
-		
-		//Dibujamos la linea superior
+
+		// Dibujamos la linea superior
 		for (int i = 0; i < base; i++) {
 			System.out.print("*");
 		}
 		System.out.println();
-		
-		//Escribimos con un bucle las lineas con los espacios en medio
-		for (int i=0;i<altura-2;i++)
-		{
-			//Dibujo el primer borde
+
+		// Escribimos con un bucle las lineas con los espacios en medio
+		for (int i = 0; i < altura - 2; i++) {
+			// Dibujo el primer borde
 			System.out.print("*");
-			
-			for(int j=0;j<base-2;j++)
-			{
+
+			for (int j = 0; j < base - 2; j++) {
 				System.out.print(" ");
 			}
-			
-			//Dibujo el último borde
+
+			// Dibujo el último borde
 			System.out.print("*\n");
 		}
-		
-		//Dibujamos la linea inferior
+
+		// Dibujamos la linea inferior
 		for (int i = 0; i < base; i++) {
 			System.out.print("*");
 		}
@@ -74,31 +71,29 @@ public class EjemploRectangulo {
 		System.out.println("**********RECTANGULO HUECO*************");
 		System.out.println("*************************************\n\n");
 
-		//Ejercicio a realizar 
-		//Realizar este mismo ejemplo pero con la logica contraria
-		//Es decir dibujar espacio si cumple la condicion que sea
-		//repetimos cada linea altura veces
-				for (int j = 0; j < altura; j++) {
-					//Dibujamos una linea de ancho base
-					for (int i = 0; i < base; i++) {
-						
-					/*
-					 * Para dibujar un * debe estar en la parte exterior
-					 * la linea superior del rectangulo implica que la altura j sea 0
-					 * la linea inferior implica que la j sea altura-2 
-					 * la linea lateral izquierda implica que la i sea 0
-					 * la linea lateral derecha implica que la i sea base-1
-					 */
-					if (j==0 || j==altura-1 || i==0 ||i==base-1)
-						System.out.print("*");
-					else
-						System.out.print(" ");
-					}
-					//Despues de cada linea hacemos un enter
-					System.out.println();
-				}
-			
-		
+		// Ejercicio a realizar
+		// PORHACER Realizar este mismo ejemplo pero con la logica contraria
+		// Es decir dibujar espacio si cumple la condicion que sea
+		// repetimos cada linea altura veces
+		for (int j = 0; j < altura; j++) {
+			// Dibujamos una linea de ancho base
+			for (int i = 0; i < base; i++) {
+
+				/*
+				 * Para dibujar un * debe estar en la parte exterior la linea superior del
+				 * rectangulo implica que la altura j sea 0 la linea inferior implica que la j
+				 * sea altura-2 la linea lateral izquierda implica que la i sea 0 la linea
+				 * lateral derecha implica que la i sea base-1
+				 */
+				if (j == 0 || j == altura - 1 || i == 0 || i == base - 1)
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			// Despues de cada linea hacemos un enter
+			System.out.println();
+		}
+
 		teclado.close();
 
 	}
