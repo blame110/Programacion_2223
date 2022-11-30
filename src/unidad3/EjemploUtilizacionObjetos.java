@@ -1,5 +1,7 @@
 package unidad3;
 
+import utilidades.Validaciones;
+
 public class EjemploUtilizacionObjetos {
 
 	public static void main(String[] args) {
@@ -11,6 +13,10 @@ public class EjemploUtilizacionObjetos {
 		// Para poder utilizar un objeto hay que crearlo
 		// Lo creamos utilizando new y el nombre de la clase
 		Persona javi = new Persona();
+		Persona carlos = new Persona();
+		Persona juanjo = new Persona("Juan José", 18, 'M', 1.76f, "Su casa");
+
+		Validaciones val = new Validaciones();
 
 		// Para acceder a los atributos de un objeto se utiliza el .
 		javi.nombre = "Javier";
@@ -25,11 +31,25 @@ public class EjemploUtilizacionObjetos {
 		// javi.altura = 1.85f;
 		// javi.direccion = "calle paloma";
 
-		System.out.println("Tu edad es de " + javi.edad);
+		System.out.println("Tu edad es de " + javi.getEdad());
 
 		javi.cumpleanos();
 
-		System.out.println("Tu edad es de " + javi.edad);
+		System.out.println("Tu edad es de " + javi.getEdad());
+
+		// Mostramos los valores de los atributos del objeto carlos
+		System.out.println(carlos);
+
+		System.out.println(juanjo);
+
+		String password = "Alumno_aaaa";
+
+		if (Validaciones.validPassword(password))
+			System.out.println("El password es valido");
+		else
+			System.out.println("El password no cumple los requisitos");
+
+		System.out.println("Hay " + Persona.getContador() + " Personas Creadas");
 
 	}
 
