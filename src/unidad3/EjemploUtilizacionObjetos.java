@@ -12,9 +12,18 @@ public class EjemploUtilizacionObjetos {
 		// Definimos un objeto denominado javi de la clase Persona
 		// Para poder utilizar un objeto hay que crearlo
 		// Lo creamos utilizando new y el nombre de la clase
-		Persona javi = new Persona();
-		Persona carlos = new Persona();
-		Persona juanjo = new Persona("Juan José", 18, 'M', 1.76f, "Su casa");
+		Ser javi = new Ser();
+		Ser carlos = new Ser();
+		Ser juanjo = new Ser("Juan José", 18, 'M', 1.76f, "Su casa", "tigre Rojo", 10, 2000);
+
+		// Se puede acceder al atributo nombre con el . directamente porque es public
+		System.out.println(juanjo.nombre);
+
+		// Podemos asignar un objeto padre a uno de clase hija, ya que
+		// contiene todos sus atributos
+		Elfo dani = (Elfo) juanjo;
+
+		System.out.println(dani);
 
 		Validaciones val = new Validaciones();
 
@@ -49,7 +58,7 @@ public class EjemploUtilizacionObjetos {
 		else
 			System.out.println("El password no cumple los requisitos");
 
-		System.out.println("Hay " + Persona.getContador() + " Personas Creadas");
+		System.out.println("Hay " + Ser.getContador() + " Personas Creadas");
 
 	}
 
