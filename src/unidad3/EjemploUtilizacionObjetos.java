@@ -21,7 +21,7 @@ public class EjemploUtilizacionObjetos {
 
 		// Podemos asignar un objeto padre a uno de clase hija, ya que
 		// contiene todos sus atributos
-		Elfo dani = (Elfo) juanjo;
+		Elfo dani = new Elfo();
 
 		System.out.println(dani);
 
@@ -29,6 +29,12 @@ public class EjemploUtilizacionObjetos {
 
 		// Para acceder a los atributos de un objeto se utiliza el .
 		javi.nombre = "Javier";
+
+		System.out.println("El seso de javi es:" + javi.getSexo());
+
+		javi.setSexo('H');
+
+		System.out.println("El seso de javi es:" + javi.getSexo());
 
 		// javi.edad = 23;
 		// llamamos a la funcion setEdad pasandole el valor 23

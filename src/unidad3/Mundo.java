@@ -49,7 +49,36 @@ public class Mundo {
 	 */
 	public Mundo() {
 
-		// TODO Auto-generated constructor stub
+		// El constructor vacio generara las localizaciones y los seres aleatoriamente
+
+	}
+
+	/**
+	 * Constructor que dependiendo del tamaño y los habitantes crea Seres y
+	 * localizaciones aleatorias
+	 * 
+	 * @param numHabitantes
+	 * @param tamanio       tamaño del mundo, define el tamaño del mapa
+	 */
+	public Mundo(int numHabitantes, int tamanio) {
+
+		// Inicializamos las listas de seres y localizacion
+		listaSeres = new ArrayList<Ser>();
+
+		this.tamanio = tamanio;
+		this.numHab = numHabitantes;
+
+		// El constructor vacio generara las localizaciones y los seres aleatoriamente
+		for (int i = 0; i < numHabitantes; i++) {
+			// Generamos una raza aleatoria
+			int raza = (int) (Math.random() * 3);
+
+			// Creamos un Ser de la raza y lo añadimos a la
+			// lista de Seres de este mundo
+			listaSeres.add(this.generarSer(this.RAZA_ELFO));
+
+		}
+
 	}
 
 	/**
@@ -176,6 +205,8 @@ public class Mundo {
 			elfoGen.tatuaje = generarNombre(raza);
 
 			elfoGen.setAltura((float) (Math.random() * 2.4));
+
+			elfoGen.setPuntosMagia((int) (Math.random() * 101));
 
 			// PorHacer
 			// A tener en cuenta, el sexo 50% de posibilidades,
