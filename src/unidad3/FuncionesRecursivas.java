@@ -59,4 +59,87 @@ public class FuncionesRecursivas {
 		return factorial;
 	}
 
+	public static void divisoresI(int num) {
+		// Recorremos todos los numeros desde 1 hasta num y comprobamos si son divisores
+		for (int i = 1; i <= num; i++) {
+
+			// La i es divisor de num si el resto de la division es 0
+			if (num % i == 0)
+				System.out.println(i);
+
+		}
+	}
+
+	public static void divisoresR(int num, int divActual) {
+		// el 1 es el final de la funcion, y siempre sera divisor
+		// sea cual sea num, por lo cual lo mostramos
+		if (divActual == 1)
+			System.out.println(1);
+		else {
+			// Si es mayor de 1 hay que comprobar si es divisor de num
+			if (num % divActual == 0)
+				System.out.println(divActual);
+			// Una vez comprobado si divActual es divisor
+			// llamamos a la funcion con el siguiente divisor posible
+			divisoresR(num, --divActual);
+
+		}
+
+	}
+
+	public static void listarParesR(int num) {
+		// Si es 2, es el último par que mostramos
+		if (num == 2)
+			System.out.println(num);
+		else {
+
+			// si no es 2 comprobamos si es par
+			if (num % 2 == 0)
+				System.out.println(num);
+
+			// llamamos a la funcion con el siguiente numero inferior
+			// Para que compruebe si es par
+			listarParesR(num - 1);
+
+		}
+	}
+
+	/**
+	 * 
+	 * @param numBus
+	 * @param listaNum
+	 * @return
+	 */
+	public static boolean buscarValorI(int numBus, int listaNum[]) {
+		// Recorremos todas las posiciones del array ListaNum
+		// con i, que va desde 0 hasta la ultima posicion length-1
+		for (int i = 0; i < listaNum.length; i++) {
+			// Para cada posicion que recorre i
+			// Comparamos el numero a buscar con el valor de la lista
+			// en esa posicion si es igual es que se ha encontrado
+			if (numBus == listaNum[i])
+				return true;
+
+		}
+		// Si el bucle acaba implica que ninguno de los numeros de
+		// la lista es igual a numBus
+		return false;
+
+	}
+
+	public static boolean buscarValorR(int numBus, int listaNum[], int contador) {
+		// Si el numero que busco esta en la posicion actual lo hemos encontrado
+		if (listaNum[contador] == numBus)
+			return true;
+
+		// Si contador llega a la ultima posicion del array y no ha encontrado
+		// el numBus entonces no esta, devolvemos false
+		if (contador == listaNum.length - 1)
+			return false;
+
+		// llamamos a nuestra funcion recursivamente con la siguiente posicion
+		return buscarValorR(numBus, listaNum, contador + 1);
+
+	}
+
 }
