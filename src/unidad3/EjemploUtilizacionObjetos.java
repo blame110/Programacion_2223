@@ -8,6 +8,11 @@ public class EjemploUtilizacionObjetos {
 		// TODO Auto-generated method stub
 
 		String direccion = "calle";
+		Ser jordi = new Ser();
+
+		int edad = 34;
+
+		Ser ana = new Ser("Ana", 18, 'F', 1.68f, "direccion", "tigre Verde", 10, 2000);
 
 		// Definimos un objeto denominado javi de la clase Persona
 		// Para poder utilizar un objeto hay que crearlo

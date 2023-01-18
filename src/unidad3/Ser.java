@@ -29,7 +29,7 @@ public class Ser {
 	 */
 	Ser() {
 
-		this.nombre = "Carlos";
+		this.nombre = "";
 		this.edad = (int) (Math.random() * 100);
 		// Tenemos un 50% de posibilidades de ser hombre o mujer
 		this.sexo = (Math.random() > 0.5 ? 'M' : 'F');
@@ -37,6 +37,7 @@ public class Ser {
 		this.direccion = "Mi casa";
 		// Incrementamos el numero de personas
 		contador++;
+
 	}
 
 	/**
